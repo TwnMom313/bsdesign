@@ -1,0 +1,46 @@
+/* IMPORT RULES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap'); /* Google Font- Young Serif */
+
+
+
+/* RESET STYLES */
+* {
+    margin: 0;
+    border: 0;
+    Padding: 0;
+}
+
+/* Font Classes */
+
+.fredericka-the-great-regular {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+/* Variables */
+
+:root {
+    
+/* colors*/
+    
+}
+
+/* Header */
+
+header image {
+    width: 100%;
+}
+
+/* Headings */
+h1 {
+    color: var(--brown-800);
+}
+
+h2 {
+    color: var(--brown-800);
+}
+
