@@ -1,6 +1,8 @@
 /* IMPORT RULES*/
 
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap'); /* Google Font- Young Serif */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
 
 
 
@@ -15,32 +17,41 @@
 
 .fredericka-the-great-regular {
     font-family: "Fredericka the Great", serif;
-    font-weight: 400;
+    font-weight: 40;
     font-style: normal;
-  }
+    }
   
-
-
+.archivo-narrow-400{
+    font-family: "Archivo Narrow", serif;
+    font-optical-sizing: auto;
+    font-weight: 16;
+    font-style: normal;
+      }
 /* Variables */
 
 :root {
-    
-/* colors*/
-    
+    --orange: #F89938;
+    --pink: #CC3366;
+    --blue: #0099CD;
+    --black: #000000;
+    --white: #ffffff;
 }
 
-/* Header */
-
+/* Headings */
+h1 
 header image {
     width: 100%;
 }
 
-/* Headings */
-h1 {
-    color: var(--brown-800);
+h2 {
+    
+    font-size: 40px;
+    letter-spacing: 10;  
 }
 
-h2 {
-    color: var(--brown-800);
-}
+
+
+
+
+
 
