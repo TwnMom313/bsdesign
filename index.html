@@ -1,53 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonnie Soto Design</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles1.css" type="text/css">
+    <script defer src="script1.js"></script>
 </head>
-<nav>
-    <p>&#9776;</p>
-        <div class="nav">
-            <i class="fa fa-bars"></i>
-                <div id="myLinks">
-                <a href="#">Back to Top</a>
-                <a href="#">About the Artist</a>
-                <a href="#">Past Projects</a>
-                <a href="#">Services</a>
-                <a href="#">Contact the Artist</a>
-                <a href="#">Testimonials</a>
-                </div>
-            </a>
-          </div>
-    </nav>
-
 <body>
-<main>
-        <h1><img src="images/bsdesign.pdf" alt="bs-logo"></h1>
-        <div id="about">
-        <h2>About the Artist</h2>
-            <p><img src="images/#23 - Bonnie Soto - HeadshotPro.png" alt="artist"></p>
-            <p>About Me</p>
-            <p><img src="images/IMG_2426.JPG" alt="artist-kids"></p>
-            <p>About my family</p>
+    <div class="parallax-container">
+        <div class="parallax-content">
+            <button id="dark-mode-toggle">🌙</button>
+            <h1 class="logo">
+                <img src="images/3.3_Soto_Logo_R.png" alt="Bonnie Soto Design" width="auto" height="600">
+            </h1>
+        </header>
+    <!-- navigation -->
+        <nav>
+            <input type="checkbox" id="checkbox" float="right">
+            <label for="checkbox" id="icon">&#9776;</label>
+            <ul>
+                <li><a href="#artist">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+        </nav>
+    
+        <main>
+            <section id="artist" class="section">
+                <h2>About the Artist</h2>
+                <img src="images/IMG_1903.jpg" alt="Bonnie Soto" class="profile-pic" width="420" height="auto">
+                <p>Bonnie Soto is a creative professional with a passion for design, animation, and photography. With a strong background in digital arts, she brings unique concepts to life through her work.</p>
+                <p>Bonnie has worked with a variety of clients, from small to large businesses. She is dedicated to providing the best possible service to each and every client, and takes pride in delivering high-quality work that exceeds expectations.</p>
+                <!-- <p>
+                    Hello, I’m Bonnie Soto, a passionate graphic designer, web developer, and creative visionary dedicated to crafting stunning digital experiences. As a disabled U.S. Army Airborne veteran and the wife of a fellow veteran, I bring resilience, precision, and adaptability into everything I do, whether it’s designing impactful visuals, developing functional websites, or crafting handmade creations.
+                    Beyond my professional expertise, I’m also a homesteader, finding joy in self-sufficiency and creating a meaningful life for my family. Speaking of family, I’m a proud of a fellow veteran and mom to twins, Lilliana and Leonardo, who constantly inspire my creativity and drive.
+                    With a strong educational background and a passion for blending technical skills with artistic flair, I strive to bring brands, businesses, and personal projects to life. Let’s create something extraordinary together!
+                </p> -->
+            </section>
+            <section id="projects" class="section">
+                <h2>Past Projects</h2>
+            
+                <!-- Tabs for different project categories -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="graphics" onclick="openTab(event, 'graphics')">Graphic Design</button>
+                    <button class="tab-btn" data-tab="animation" onclick="openTab(event, 'animation')">Animation</button>
+                    <button class="tab-btn" data-tab="photography" onclick="openTab(event, 'photography')">Photography</button>
+                    <button class="tab-btn" data-tab="web-design" onclick="openTab(event, 'web-design')">Web Design</button>
+                </div>
+            
+                <!-- Tab Content -->
+                <div class="tab-content active" id="graphics">
+                    <div class="carousel" id="carousel-graphics">
+                        <button class="prev" onclick="moveSlide('graphics', -1)">&#10094;</button>
+                        <div class="carousel-inner">
+                            <img src="images/wheelchair.png" alt="wheelchair art">
+                            <img src="images//finepoint.pdf" alt="fine point design">
+                            <img src="images/landscape.png" alt="vector landscape">
+                        </div>
+                        <button class="next" onclick="moveSlide('graphics', 1)">&#10095;</button>
+                    </div>
+                </div>
+            
+                <div class="tab-content" id="animation">
+                    <div class="carousel" id="carousel-animation">
+                        <button class="prev" onclick="moveSlide('animation', -1)">&#10094;</button>
+                        <div class="carousel-inner">
+                            <video src="media/bumble-bee.mp4" controls></video>
+                            <video src="videos/animation2.mp4" controls></video>
+                        </div>
+                        <button class="next" onclick="moveSlide('animation', 1)">&#10095;</button>
+                    </div>
+                </div>
+            
+                <div class="tab-content" id="photography">
+                    <div class="carousel" id="carousel-photography">
+                        <button class="prev" onclick="moveSlide('photography', -1)">&#10094;</button>
+                        <div class="carousel-inner">
+                            <img src="images/flowers copy.jpg" alt="azaleas">
+                            <img src="images/photo2.jpg" alt="Photography 2">
+                        </div>
+                        <button class="next" onclick="moveSlide('photography', 1)">&#10095;</button>
+                    </div>
+                </div>
+            
+                <div class="tab-content" id="web-design">
+                    <div class="carousel" id="carousel-web-design">
+                        <button class="prev" onclick="moveSlide('web-design', -1)">&#10094;</button>
+                        <div class="carousel-inner">
+                            <img src="images/web1.jpg" alt="Web Design 1">
+                            <img src="images/web2.jpg" alt="Web Design 2">
+                        </div>
+                        <button class="next" onclick="moveSlide('web-design', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="services" class="section">
+                <h2>Services</h2>
+                <ul class="services-list">
+                    <li class="tooltip">Graphic Design
+                        <span class="tooltip-text">$50 - $500</span>
+                    </li>
+                    <li class="tooltip">Animation
+                        <span class="tooltip-text">$100 - $1000</span>
+                    </li>
+                    <li class="tooltip">Photography
+                        <span class="tooltip-text">$25 - $250</span>
+                    </li>
+                </ul>
+            </section>
+            <section id="contact" class="section">
+                <h2>Contact the Artist</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            <section id="testimonials" class="section">
+                <h2>Testimonials</h2>
+                <div class="testimonial">"Bonnie's work is amazing!" - John Doe</div>
+                <div class="testimonial">"Incredible creativity and professionalism." - Jane Smith</div>
+                <div class="testimonial">"Incredible creativity and professionalism." - Jane Smith</div>
+            </section>
+            <footer class="social-media">
+                <a href="facebook.com"><img src="images/facebook-logo.png" alt="Facebook" width="20%" height="auto"></a>
+                <a href="instagram.com"><img src="images/instagram-logo.png" alt="Instagram" width="20%" height="auto"></a>
+                <a href="x.com"><img src="images/x-logo.png" alt="X"width="20%" height="auto"></a>
+            </footer>
         </div>
-        <div id="past">
-        <h2>Past Projects</h2>
-            <!-- Tabs of different types of work featureing carosel for photos in each tab -->
-        </div>
-        <div id="servies">
-        <h2>Services</h2>
-            <!-- icons with hover menus showing price ranges -->
-        </div>
-        <div id="conact">
-        <h2>Contact the Artist</h2>
-            <!-- conact form with variuos options -->
-        </div>
-        <div id="testimonials">
-        <h2>Testimonials</h2>
-            <!-- buttons for social media -->
-        </div>
-</main>
+    </div>
 </body>
 </html>
