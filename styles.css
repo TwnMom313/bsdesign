@@ -38,6 +38,7 @@ body {
     align-items: center;
     justify-content: space-around;
     font-family: "archivo-narrow-400";
+    font-size: 2rem;
     background-color: var(--white);
     color: var(--black);
 }
