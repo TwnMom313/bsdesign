@@ -51,9 +51,9 @@ body.dark-mode {
     color: var(--dWhite);
   }
 
-.wrapper {
+/* .wrapper {
 
-}
+} */
 
 main {
     display: flex;
