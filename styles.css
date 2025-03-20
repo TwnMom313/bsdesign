@@ -190,7 +190,7 @@ img {
 .tabs label {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: ;
 	order: 1; /*Put the labels first*/
 	display: block;
 	padding: 1rem 2rem;
@@ -204,9 +204,6 @@ img {
   border-right: solid 1px var(--black);
 }
 .tabs .tab {
-  display:flex;
-  justify-content: center;
-  align-items: center;
   order: 99; /*Put the tabs last*/
   flex-grow: 1;
 	width: 100%;
@@ -311,9 +308,10 @@ img {
   /*columns side by side */
   .column {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    float: left;
+    width: 10%;
   }
   
   /* Add a transparency effect for thumnbail images */
