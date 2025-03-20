@@ -42,14 +42,22 @@ body {
     background-color: var(--white);
     color: var(--black);
 }
-body.light-mode {
-    background-color: var(--white);
-    color: var(--black);
+/*light theme styles*/
+
+  @media (prefers-color-scheme: light){
+    body {
+      background-color: var(--white);
+      color: var(--black);
+    }
   }
   
-body.dark-mode {
-    background-color: var(--dBlack);
-    color: var(--dWhite);
+  /* Dark theme styles */
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--dBlack);
+      color: var(--dWhite);
+    }
   }
 
 /* .wrapper {
@@ -139,7 +147,6 @@ nav ul li a {
     padding: 15px;
     font-size: 1.5rem;
     text-decoration: none;
-    color: white;
     transition: background 0.3s ease-in-out;
 }
 nav ul li a:hover {
@@ -158,6 +165,7 @@ nav ul li a:hover {
     }
 }
 
+/*logo*/
 .logo {
     display: flex;
     justify-content: center;
@@ -165,6 +173,17 @@ nav ul li a:hover {
     align-items: center;
     width: 100%;
 }
+
+img {
+  src: url("images/3.3_Soto_Logo_R.png"); /* Default light mode logo */
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    src: url("images/3.3_Soto_Logo.png"); /* Dark mode logo */
+  }
+}
+
 
 .profile {
     display: flex;
@@ -218,16 +237,6 @@ nav ul li a:hover {
     margin-top: 0.2rem;
   }
 }
-
-/*Tab Styling*/
-body {
-  background: #eee;
-  min-height: 100vh;
-	box-sizing: border-box;
-	padding-top: 10vh;
-  font-family: "roboto-400"
-}
- 
 
 /*Carousel Section Styles*/
 * {

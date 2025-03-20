@@ -29,3 +29,26 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+//dark mode
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+function toggleDarkMode(event) {
+  if (event.matches) {
+    document.body.classList.add('dark-theme');
+  } else {
+    document.body.classList.add('light-theme');
+  }
+}
+
+prefersDark.addEventListener('change', toggleDarkMode);
+
+
+//logo swap dark mode
+const logoImage = document.getElementById('your-logo-id');
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  logoImage.src = "images/3.3_Soto_Logo.png";
+} else {
+  logoImage.src = "images/3.3_Soto_Logo_R.png";
+}
