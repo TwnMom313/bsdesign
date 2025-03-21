@@ -53,9 +53,9 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace("active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += "active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  slides[slideIndexAnimation-1].style.display = "block";
+  dots[slideIndexAnimation-1].className += "active";
+  captionText.innerHTML = dots[slideIndexAnimation-1].alt;
 }
 
 //carousel photography
@@ -83,9 +83,9 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  slides[slideIndexPhoto-1].style.display = "block";
+  dots[slideIndexPhoto-1].className += " active";
+  captionText.innerHTML = dots[slideIndexPhoto-1].alt;
 }
 
 //carousel web design
@@ -113,9 +113,9 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  slides[slideIndexWeb-1].style.display = "block";
+  dots[slideIndexWeb-1].className += " active";
+  captionText.innerHTML = dots[slideIndexWeb-1].alt;
 }
 
 //dark mode
