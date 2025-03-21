@@ -60,6 +60,16 @@ body {
     }
   }
 
+  img {
+    src: url("images/3.3_Soto_Logo_R.png"); /* Default light mode logo */
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    img {
+      src: url("images/3.3_Soto_Logo.png"); /* Dark mode logo */
+    }
+  }
+
 /* .wrapper {
 
 } */
@@ -164,17 +174,7 @@ nav ul li a:hover {
     width: 100%;
 }
 
-img {
-  src: url("images/3.3_Soto_Logo_R.png"); /* Default light mode logo */
-}
-
-@media (prefers-color-scheme: dark) {
-  img {
-    src: url("images/3.3_Soto_Logo.png"); /* Dark mode logo */
-  }
-}
-
-
+/*image*/
 .profile {
     display: flex;
     justify-content: center;
