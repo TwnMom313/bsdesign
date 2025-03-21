@@ -87,9 +87,12 @@ nav {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
     text-align: center;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    z-index: 10;
 }
 #checkbox {
     display: none;
@@ -190,7 +193,7 @@ img {
 .tabs label {
   display: flex;
   justify-content: center;
-  align-items: ;
+  align-items: center;
 	order: 1; /*Put the labels first*/
 	display: block;
 	padding: 1rem 2rem;
