@@ -48,6 +48,9 @@ body {
     body {
       background-color: var(--white);
       color: var(--black);
+      img {
+        src: url("images/3.3_Soto_Logo_R.png"); /* Default light mode logo */
+      }
     }
   }
   
@@ -58,17 +61,12 @@ body {
       background-color: var(--dBlack);
       color: var(--dWhite);
     }
-  }
-
-  img {
-    src: url("images/3.3_Soto_Logo_R.png"); /* Default light mode logo */
-  }
-  
-  @media (prefers-color-scheme: dark) {
     img {
       src: url("images/3.3_Soto_Logo.png"); /* Dark mode logo */
     }
   }
+
+  
 
 /* .wrapper {
 
@@ -314,7 +312,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     float: left;
-    width: 10%;
+    width: 14%;
   }
   
   /* Add a transparency effect for thumnbail images */
