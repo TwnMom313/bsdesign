@@ -26,8 +26,14 @@
 <main>
 <!-- LOGO -->
 <!--Nav Target Section about-->
-<section>
-<h1 id="top" class="logo"><img id="your-logo-id" src="images/3.3_Soto_Logo_R.png" alt="BS design" width="420" height="auto"></h1>
+<!-- <section id="top">
+  <picture>
+    <source srcset="images/3.3_Soto_Logo_R.png">
+    <source media="dark)" srcset="images/3.3_Soto_Logo.png">
+    <img src="images/3.3_Soto_Logo_R.png" alt="BS design logo" style="width:auto;">
+  </picture> -->
+
+<h1 class="logo"><img id="your-logo-id" src="images/3.3_Soto_Logo_R.png" alt="BS design" width="420" height="auto"></h1>
 
  <!-- about the artist -->
   <section id="about">
@@ -49,9 +55,8 @@
     </section>
 
     <!-- my work -->
-     <section id="work">
+    <section id="work">
       <!-- refference https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
-      <!-- Garphics -->
       <div class="tabs">
       <input type="radio" name="tabs" id="tabone" checked="checked">
       <label for="tabone">Graphic Design</label>
@@ -138,18 +143,20 @@
           <div class="container">
           
             <!-- Full-width images with number text -->
-            <div class="mySlides">
-              <div class="numbertext">1 / 4</div>
+            <div class="mySlidesAnimation">
+              <div class="numbertext">1 / 3</div>
                 <img src="media/bumble-bee.mp4" style="width:100%">
             </div>
           
-            <div class="mySlides">
-              <div class="numbertext">2 / 4</div>
+            <div class="mySlidesAnimation">
+              <div class="numbertext">1 /">
+              <div class="numbertext">2 / 3</div>
                 <img src="media/biped.mp4" style="width:100%">
             </div>
           
-            <div class="mySlides">
-              <div class="numbertext">3 / 4</div>
+            <div class="mySlidesAnimation">
+              <div class="numbertext">1 /">
+              <div class="numbertext">3 / 3</div>
                 <img src="media/animal.mp4" style="width:100%">
             </div>
           
@@ -159,19 +166,20 @@
           
             <!-- Image text -->
             <div class="caption-container">
-              <p id="caption"></p>
+              <p id="captionAnimation">
+                <div class="numbertext">1 /"></p>
             </div>
           
             <!-- Thumbnail images -->
             <div class="row">
               <div class="column">
-                <img class="demo cursor" src="media/bumble-bee.mp4" style="width:100%" onclick="currentSlide(1)" alt="sketch bumble bee">
+                <img class="demoAnimation cursor" src="media/bumble-bee.mp4" style="width:100%" onclick="currentSlide(1)" alt="sketch bumble bee">
               </div>
               <div class="column">
-                <img class="demo cursor" src="media/biped.mp4" style="width:100%" onclick="currentSlide(2)" alt="sketch bush baby">
+                <img class="demoAnimation cursor" src="media/biped.mp4" style="width:100%" onclick="currentSlide(2)" alt="sketch bush baby">
               </div>
               <div class="column">
-                <img class="demo cursor" src="media/animal.mp4" style="width:100%" onclick="currentSlide(3)" alt="sketch goat">
+                <img class="demoAnimation cursor" src="media/animal.mp4" style="width:100%" onclick="currentSlide(3)" alt="sketch goat">
               </div>
             </div>
           </div>
@@ -180,26 +188,27 @@
       <!-- Photography -->
       <input type="radio" name="tabs" id="tabthree">
       <label for="tabthree">Photography</label>
-      <div class="tab"><!-- Container for the image gallery -->
+      <div class="tab">
+        <!-- Container for the image gallery -->
         <div class="container">
         
           <!-- Full-width images with number text -->
-          <div class="mySlides">
+          <div class="mySlidesPhoto">
             <div class="numbertext">1 / 4</div>
               <img src="images/Flowers/Flowers.jpg" style="width:100%">
           </div>
         
-          <div class="mySlides">
+          <div class="mySlidesPhoto">
             <div class="numbertext">2 / 4</div>
               <img src="images/Flowers/Flowers2.jpg" style="width:100%">
           </div>
         
-          <div class="mySlides">
+          <div class="mySlidesPhoto">
             <div class="numbertext">3 / 4</div>
               <img src="images/Flowers/Flowers3.jpg" style="width:100%">
           </div>
         
-          <div class="mySlides">
+          <div class="mySlidesPhoto">
             <div class="numbertext">4 / 4</div>
               <img src="images/Flowers/Flowers4.jpg" style="width:100%">
           </div>
@@ -207,16 +216,16 @@
           <!-- Thumbnail images -->
           <div class="row">
             <div class="column">
-              <img class="demo cursor" src="images/Flowers/Flowers.jpg" style="width:100%" onclick="currentSlide(1)" alt="azaleas1">
+              <img class="demoPhoto cursor" src="images/Flowers/Flowers.jpg" style="width:100%" onclick="currentSlide(1)" alt="azaleas1">
             </div>
             <div class="column">
-              <img class="demo cursor" src="images/Flowers/Flowers2.jpg" style="width:100%" onclick="currentSlide(2)" alt="azaleas2">
+              <img class="demoPhoto cursor" src="images/Flowers/Flowers2.jpg" style="width:100%" onclick="currentSlide(2)" alt="azaleas2">
             </div>
             <div class="column">
-              <img class="demo cursor" src="images/Flowers/Flowers3.jpg" style="width:100%" onclick="currentSlide(3)" alt="azaleas3">
+              <img class="demoPhoto cursor" src="images/Flowers/Flowers3.jpg" style="width:100%" onclick="currentSlide(3)" alt="azaleas3">
             </div>
             <div class="column">
-              <img class="demo cursor" src="images/Flowers/Flowers4.jpg" style="width:100%" onclick="currentSlide(4)" alt="azaleas4">
+              <img class="demoPhoto cursor" src="images/Flowers/Flowers4.jpg" style="width:100%" onclick="currentSlide(4)" alt="azaleas4">
             </div>
           </div>
         </div>
@@ -230,12 +239,12 @@
         <div class="container">
         
           <!-- Full-width images with number text -->
-          <div class="mySlides">
+          <div class="mySlidesWeb">
             <div class="numbertext">1 / 2</div>
               <img src="images/ability.png" style="width:100%">
           </div>
         
-          <div class="mySlides">
+          <div class="mySlidesWeb">
             <div class="numbertext">2 / 2</div>
               <img src="images/sour-patch.png" style="width:100%">
           </div>
@@ -246,16 +255,16 @@
         
           <!-- Image text -->
           <div class="caption-container">
-            <p id="caption"></p>
+            <p id="captionWeb"></p>
           </div>
         
           <!-- Thumbnail images -->
           <div class="row">
             <div class="column">
-              <img class="demo cursor" src="images/ability.png" style="width:100%" onclick="currentSlide(1)" alt="wheelchair art">
+              <img class="demoWeb cursor" src="images/ability.png" style="width:100%" onclick="currentSlide(1)" alt="wheelchair art">
             </div>
             <div class="column">
-              <img class="demo cursor" src="images/sour-patch.png" style="width:100%" onclick="currentSlide(2)" alt="sour patch hearts">
+              <img class="demoWeb cursor" src="images/sour-patch.png" style="width:100%" onclick="currentSlide(2)" alt="sour patch hearts">
             </div>
           </div>
         </div>
@@ -265,7 +274,8 @@
 
     <!-- Services -->
     <!--Nav Target Section -->
-    <section><h2 id="services">Services</h2>
+    <section id="services">
+      <h2>Services</h2>
       <div class="button-container">
           <button class="price-button graphic-design" data-price="$50 - $500" width="420" height="auto">Graphic Design</button>
           <button class="price-button photography" data-price="$100 - $2000" width="420" height="auto">Photography</button>
@@ -275,9 +285,9 @@
     </section>
 
     <!-- Contact Me -->
-     <section>
+     <section id="contact">
       <!--Nav Target Section -->
-      <h2 id="contact">Contact Me</h2>
+      <h2 >Contact Me</h2>
       <form>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
@@ -290,9 +300,9 @@
   </section>
   <!-- Testimonials -->
    <!-- refference https://www.w3schools.com/howto/howto_js_accordion.asp -->
-   <section>
+   <section id="testimonials">
     <!--Nav Target Section -->
-    <h2 id="testimonials">Testimonials</h2>
+    <h2>Testimonials</h2>
     <div class="accordion" id="accordionExample">
       <button class="accordion">Great Designer!</button>
       <div class="panel">
