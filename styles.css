@@ -60,14 +60,9 @@ body {
     }
   }
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
+/* .wrapper {
 
-}
+} */
 
 main {
     display: flex;
@@ -166,7 +161,8 @@ nav ul li a:hover {
     justify-content: center;
     justify-self: center;
     align-items: center;
-    width: 100%;
+    width: Auto;
+    height: 150%;
 }
 
 img {
@@ -185,17 +181,11 @@ img {
     justify-content: center;
     justify-self: center;
     align-items: center;
-    width: 100%;
+    width: 40%;
+    height: auto;
 }
 
 /* Project Tabs */
-<<<<<<< HEAD
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-=======
 .tabs {
 	display: flex;
 	flex-wrap: wrap;  /* make sure it wraps */
@@ -205,11 +195,7 @@ img {
 .tabs label {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
-  /* align-items: ; */
-=======
   align-items: center;
->>>>>>> b3159645cdd2ffec8ebe5a5c34870106ffac626b
 	order: 1; /*Put the labels first*/
 	display: block;
 	padding: 1rem 2rem;
@@ -238,46 +224,33 @@ img {
 }
 .tabs input[type="radio"]:checked + label + .tab {
 	display: block;
->>>>>>> e8338d3879877d351d9c90749964689e326c1094
 }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+/*SLIDES Section Styles*/
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-/*Carousel Section Styles*/
 * {
     box-sizing:content-box;
   }
-  
+  /*grapics*/
   img {
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 420px;
+    height: auto;
+    
   }
   
   /* Position the image container (needed to position the left and right arrows) */
@@ -349,7 +322,7 @@ img {
     justify-content: center;
     align-items: center;
     float: left;
-    width: 10%;
+    width: 14%;
   }
   
   /* Add a transparency effect for thumnbail images */
@@ -361,6 +334,68 @@ img {
   .demo:hover {
     opacity: 1;
   }
+
+  .mySlidesP {
+    display: none;
+  }
+  
+
+  /*video*/
+  .slideshow-containerA {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .mySlidesA {
+    display: none;
+  }
+  
+  .fadeA {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+  }
+  
+  .prevA, .nextA {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .nextA {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .dotA {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .activeA, .dotA:hover {
+    background-color: #717171;
+  }
+  
 
 /*Price Buttons*/
 .button-container {
@@ -429,10 +464,10 @@ img {
 form {
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
-    gap: 20px;
+    font-size: 2rem;
+    gap: 30px;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     margin: auto;
     background: linear-gradient(90deg, var(--blue), var(--orange), var(--pink));
     padding: 20px;
@@ -471,4 +506,6 @@ form {
     flex-direction: row;
     justify-content: center space-around;
     align-items: center;
+    width: 10%;
+    height: auto;
   }
