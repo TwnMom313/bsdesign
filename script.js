@@ -21,33 +21,16 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
   logoImage.src = "images/3.3_Soto_Logo_R.png";
 }
 
-
-// tabs
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-
-// === GRAPHIC DESIGN SLIDESHOW ===
-let slideIndexG = 1;
-showSlides(slideIndexG);
+//Graphics slides
+let slideIndex = 1;
+showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndexG += n);
+  showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndexG = n);
+  showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
@@ -56,65 +39,68 @@ function showSlides(n) {
   let dots = document.getElementsByClassName("demo");
   let captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndexG = slides.length}
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndexG-1].style.display = "block";
-  dots[slideIndexG-1].className += " active";
-  captionText.innerHTML = dots[slideIndexG-1].alt;
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-// === ANIMATION SLIDESHOW ===
+// Animation slides
 let slideIndexA = 1;
-showSlides(slideIndexA);
+showSlidesA(slideIndexA);
 
-function plusSlides(n) {
-  showSlides(slideIndexA += n);
+function plusSlidesA(n) {
+  showSlidesA(slideIndexA += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexA = n);
+function currentSlideA(n) {
+  showSlidesA(slideIndexA = n);
 }
 
-function showSlides(n) {
+function showSlidesA(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndexA = 1}
-  if (n < 1) {slideIndexA = slides.length}
+  let slides = document.getElementsByClassName("mySlidesA");
+  let dots = document.getElementsByClassName("dotA");
+
+  if (n > slides.length) { slideIndexA = 1; }
+  if (n < 1) { slideIndexA = slides.length; }
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" activeA", "");
   }
-  slides[slideIndexA-1].style.display = "block";
-  dots[slideIndexA-1].className += " active";
-  captionText.innerHTML = dots[slideIndexA-1].alt;
+
+  slides[slideIndexA - 1].style.display = "block";
+  dots[slideIndexA - 1].className += " activeA";
 }
 
-// === PHOTOGRAPHY SLIDESHOW ===
+
+// Photography slides
 let slideIndexP = 1;
-showSlides(slideIndexP);
+showSlidesP(slideIndexP);
 
-function plusSlides(n) {
-  showSlides(slideIndexP += n);
+function plusSlidesP(n) {
+  showSlidesP(slideIndexP += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexP = n);
+function currentSlideP(n) {
+  showSlidesP(slideIndexP = n);
 }
-
-function showSlides(n) {
+window.onload = 
+function showSlidesP(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+  let captionText = document.getElementById("captionP");
   if (n > slides.length) {slideIndexP = 1}
   if (n < 1) {slideIndexP = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -127,24 +113,25 @@ function showSlides(n) {
   dots[slideIndexP-1].className += " active";
   captionText.innerHTML = dots[slideIndexP-1].alt;
 }
+  showSlidesP(slideIndexP);
 
-// === WEB DESIGN/DEVELOPMENT SLIDESHOW ===
+// Web Design/Development slides
 let slideIndexW = 1;
-showSlides(slideIndexW);
+showSlidesW(slideIndexW);
 
-function plusSlides(n) {
-  showSlides(slideIndexW += n);
+function plusSlidesW(n) {
+  showSlidesW(slideIndexW += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexW = n);
+function currentSlideW(n) {
+  showSlidesW(slideIndexW = n);
 }
 
-function showSlides(n) {
+function showSlidesW(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+  let captionText = document.getElementById("captionW");
   if (n > slides.length) {slideIndexW = 1}
   if (n < 1) {slideIndexW = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -158,7 +145,7 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndexW-1].alt;
 }
 
-//TESTIMONIALS
+//accordian testimonails
 var acc = document.getElementsByClassName("accordion");
 var i;
 
