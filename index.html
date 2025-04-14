@@ -57,33 +57,6 @@
     <!-- my work -->
     <section id="work">
       <!-- refference https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
-      <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-      </div>
-      
-      <div id="G" class="tabcontent">
-        <h3>Graphic Design</h3>
-        <p>Carousel</p>
-      </div>
-      
-      <div id="A" class="tabcontent">
-        <h3>Animation</h3>
-        <p>Carousel</p> 
-      </div>
-      
-      <div id="P" class="tabcontent">
-        <h3>Photography</h3>
-        <p>Carousel</p>
-      </div>
-      
-      <div id="W" class="tabcontent">
-        <h3>Web Design/Development</h3>
-        <p>Carousel</p>
-      </div>
-
-
       <div class="tabs">
       <input type="radio" name="tabs" id="tabone" checked="checked">
       <label for="tabone">Graphic Design</label>
@@ -91,44 +64,44 @@
         <div class="container">
         
           <!-- Full-width images with number text -->
-          <div class="mySlidesG">
+          <div class="mySlides">
             <div class="numbertext">1 / 7</div>
               <img src="images/ability.png" alt="wheelchair art">
           </div>
         
-          <div class="mySlidesG">
+          <div class="mySlides">
             <div class="numbertext">2 / 7</div>
               <img src="images/sour-patch.png" alt="sour patch hearts">
           </div>
         
-          <div class="mySlidesG">
+          <div class="mySlides">
             <div class="numbertext">3 / 7</div>
               <img src="images/finepoint.png" alt="finepoint designs logo">
           </div>
         
-          <div class="mySlidesG">
+          <div class="mySlides">
             <div class="numbertext">4 / 7</div>
               <img src="images/toilet.jpg" alt="toilet flush ad">
           </div>
         
-          <div class="mySlidesG">
+          <div class="mySlides">
             <div class="numbertext">5 / 7</div>
               <img src="images/clogging.png" alt="clogging">
           </div>
         
-          <div class="mySlidesG">
+          <div class="mySlides">
             <div class="numbertext">6 / 7</div>
               <img src="images/ireland.png" alt="ireland way finder">
           </div>
           
-          <div class="mySlidesG">
+          <div class="mySlides">
             <div class="numbertext">7 / 7</div>
               <img src="images/landscape.png" alt="purple mountains vector">
           </div>
         
           <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlidesG(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlidesG(1)">&#10095;</a>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         
           <!-- Image text -->
           <div class="caption-container">
@@ -138,19 +111,19 @@
           <!-- Thumbnail images -->
           <div class="row">
             <div class="column">
-              <img class="demo cursor" src="images/ability.png" style="width:100%" onclick="currentSlide(1)" alt="wheelchair art">
+              <img class="demo cursor" src="images/ability.png" onclick="currentSlide(1)" alt="wheelchair art">
             </div>
             <div class="column">
-              <img class="demo cursor" src="images/sour-patch.png" style="width:100%" onclick="currentSlide(2)" alt="sour patch hearts">
+              <img class="demo cursor" src="images/sour-patch.png" onclick="currentSlide(2)" alt="sour patch hearts">
             </div>
             <div class="column">
-              <img class="demo cursor" src="images/finepoint.png" style="width:100%" onclick="currentSlide(3)" alt="finepoint designs logo">
+              <img class="demo cursor" src="images/finepoint.png" onclick="currentSlide(3)" alt="finepoint designs logo">
             </div>
             <div class="column">
-              <img class="demo cursor" src="images/toilet.jpg" style="width:100%" onclick="currentSlide(4)" alt="toilet flush ad">
+              <img class="demo cursor" src="images/toilet.jpg" onclick="currentSlide(4)" alt="toilet flush ad">
             </div>
             <div class="column">
-              <img class="demo cursor" src="images/clogging.png" onclick="currentSlideG(5)" alt="clogging">
+              <img class="demo cursor" src="images/clogging.png" style="width:100%" onclick="currentSlide(5)" alt="clogging">
             </div>
             <div class="column">
               <img class="demo cursor" src="images/ireland.png" onclick="currentSlide(6)" alt="ireland way finder">
@@ -200,7 +173,7 @@
             <!-- Thumbnail images -->
             <div class="row">
               <div class="column">
-                <img class="demoAnimation cursor" src="media/bumble-bee.mp4"  onclick="currentSlide(1)" alt="sketch bumble bee">
+                <img class="demoAnimation cursor" src="media/bumble-bee.mp4" style="width:100%" onclick="currentSlide(1)" alt="sketch bumble bee">
               </div>
               <div class="column">
                 <img class="demoAnimation cursor" src="media/biped.mp4" onclick="currentSlide(2)" alt="sketch bush baby">
@@ -243,16 +216,16 @@
           <!-- Thumbnail images -->
           <div class="row">
             <div class="column">
-              <img class="demoPhoto cursor" src="images/Flowers/Flowers.jpg"  onclick="currentSlide(1)" alt="azaleas1">
+              <img class="demoPhoto cursor" src="images/Flowers/Flowers.jpg" style="width:100%" onclick="currentSlide(1)" alt="azaleas1">
             </div>
             <div class="column">
-              <img class="demoPhoto cursor" src="images/Flowers/Flowers2.jpg"  onclick="currentSlide(2)" alt="azaleas2">
+              <img class="demoPhoto cursor" src="images/Flowers/Flowers2.jpg" style="width:100%" onclick="currentSlide(2)" alt="azaleas2">
             </div>
             <div class="column">
-              <img class="demoPhoto cursor" src="images/Flowers/Flowers3.jpg"  onclick="currentSlide(3)" alt="azaleas3">
+              <img class="demoPhoto cursor" src="images/Flowers/Flowers3.jpg" style="width:100%" onclick="currentSlide(3)" alt="azaleas3">
             </div>
             <div class="column">
-              <img class="demoPhoto cursor" src="images/Flowers/Flowers4.jpg"  onclick="currentSlide(4)" alt="azaleas4">
+              <img class="demoPhoto cursor" src="images/Flowers/Flowers4.jpg" style="width:100%" onclick="currentSlide(4)" alt="azaleas4">
             </div>
           </div>
         </div>
@@ -282,7 +255,7 @@
         
           <!-- Image text -->
           <div class="caption-container">
-            <p id="caption"></p>
+            <p id="captionWeb"></p>
           </div>
         
           <!-- Thumbnail images -->
@@ -330,21 +303,22 @@
    <section id="testimonials">
     <!--Nav Target Section -->
     <h2>Testimonials</h2>
-    <button class="accordion">Section 1</button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    
-    <button class="accordion">Section 2</button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    
-    <button class="accordion">Section 3</button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </section>
+    <div class="accordion" id="accordionExample">
+      <button class="accordion">Great Designer!</button>
+      <div class="panel">
+        <p>business owner: Wow, Bonnie creates great designs.</p>
+      </div>
+      
+      <button class="accordion">Wonderful to work with.</button>
+      <div class="panel">
+        <p>business owner: Wow, Bonnie creates great designs.</p>
+      </div>
+      
+      <button class="accordion">Awesome work as an intern</button>
+      <div class="panel">
+        <p>business owner: Wow, Bonnie creates great designs.</p>
+      </div>
+      </section>
     </div>
     </div>
   </div>
@@ -354,9 +328,9 @@
 <!-- Social Media -->
 <footer>
         <div class="social-media">
-            <a href="https://www.facebook.com/profile.php?id=61572991222809"><img src="images/facebook.png" alt="Facebook" width="10%" hieght="auto"></a>
-            <a href="https://www.instagram.com/"><img src="images/insta.png" alt="Instagram" width="10%" hieght="auto"></a>
-            <a href="https://www.x.com/"><img src="images/x.png" alt="x" width="10%" hieght="auto"></a>
+            <a href="https://www.facebook.com/profile.php?id=61572991222809"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="https://www.x.com/"><img src="images/x.png" alt="x"></a>
         </div>
     </footer>
   </main> 
