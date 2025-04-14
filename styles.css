@@ -184,11 +184,56 @@ img {
 }
 
 /* Project Tabs */
+<<<<<<< HEAD
 /* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+=======
+.tabs {
+	display: flex;
+	flex-wrap: wrap;  /* make sure it wraps */
+  justify-content: center;
+  align-items: center;
+}
+.tabs label {
+  display: flex;
+  justify-content: center;
+<<<<<<< HEAD
+  /* align-items: ; */
+=======
+  align-items: center;
+>>>>>>> b3159645cdd2ffec8ebe5a5c34870106ffac626b
+	order: 1; /*Put the labels first*/
+	display: block;
+	padding: 1rem 2rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+  font-weight: bold;
+  transition:  ease 0.2s;
+  background-color: var(--orange);
+  border-top: solid 1px var(--black);
+  border-left: solid 1px var(--black);
+  border-right: solid 1px var(--black);
+}
+.tabs .tab {
+  order: 99; /*Put the tabs last*/
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+  padding: 1rem;
+  background-color: var(--white);
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+	background: var(--white);
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+>>>>>>> e8338d3879877d351d9c90749964689e326c1094
 }
 
 /* Style the buttons inside the tab */
@@ -382,7 +427,7 @@ form {
     font-size: 1.5rem;
     gap: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     margin: auto;
     background: linear-gradient(90deg, var(--blue), var(--orange), var(--pink));
     padding: 20px;
