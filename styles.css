@@ -506,6 +506,10 @@ form {
     flex-direction: row;
     justify-content: center space-around;
     align-items: center;
-    width: 10%;
-    height: auto;
+  }
+  .social-media img {
+    height: 3.6rem;
+    width: 3.6rem;
+    margin: 0 10px;
+    transition: transform 0.2s;
   }
