@@ -60,9 +60,9 @@ body {
     }
   }
 
-/* .wrapper {
-
-} */
+  .wrapper {
+    width: 80%;
+}
 
 main {
     display: flex;
