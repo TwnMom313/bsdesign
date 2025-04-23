@@ -1,0 +1,455 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+
+/*font-family Roboto, Archivo Narrow*/
+
+.roboto-400 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+  .archivo-narrow-400 {
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/*variables*/
+:root {
+    --white: white;
+    --black: black;
+    --orange: #F89938;
+    --blue: #0099CD;
+    --pink: #CC3366;
+    --dWhite: white;
+    --dBlack: black;
+}
+
+/* Global Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "archivo-narrow-400";
+    font-size: 2rem;
+    background-color: var(--white);
+    color: var(--black);
+}
+/*light theme styles*/
+
+  @media (prefers-color-scheme: light){
+    body {
+      background-color: var(--white);
+      color: var(--black);
+    }
+  }
+  
+  /* Dark theme styles */
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--dBlack);
+      color: var(--dWhite);
+    }
+  }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+}
+h1, h2 {
+    font-family: "roboto-400";
+    text-align: center;
+}
+h1 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/*naviagtion*/
+nav {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: center;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    z-index: 10;
+}
+#checkbox {
+    display: none;
+}
+    /* Hamburger Icon */
+#icon {
+    font-size: 4rem;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: none;
+    width: 100%;
+}
+
+    /* Dropdown navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: linear-gradient(90deg, var(--blue), var(--orange), var(--pink));
+    opacity: 0.9;
+    display: none;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+    /* Show Menu When Checked */
+#checkbox:checked ~ ul {
+    display: flex;
+}
+    /* Menu Items */
+nav ul li {
+    width: 100%;
+    text-align: center;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+    /* Desktop: Keep Hamburger, Make Menu Dropdown */
+@media screen and (min-width: 1024px) {
+    #icon {
+        display: block; 
+    /* Keep hamburger on desktop */
+    }
+    nav ul {
+        flex-direction: column;
+        top: 50px;
+        left: 0;
+    }
+}
+
+/*logo*/
+.logo {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    width: Auto;
+    height: 150%;
+}
+
+.logo img {
+  src: url("images/3.3_Soto_Logo_R.png"); /* Default light mode logo */
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo img {
+    src: url("images/3.3_Soto_Logo.png"); /* Dark mode logo */
+  }
+}
+
+
+.profile {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+}
+
+
+/* Project Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;  /*make sure it wraps*/ 
+
+
+}
+.tabs label {
+  order: 1; /*Put the labels first*/
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition:  ease 0.2s;
+  background-color: var(--orange);
+  border-top: solid 1px var(--black);
+  border-left: solid 1px var(--black);
+  border-right: solid 1px var(--black);
+}
+.tabs .tab {
+  order: 99; /*Put the tabs last*/
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  background-color: var(--white);
+}
+.tabs input[type="radio"] {
+  display: none;
+}
+.tabs input[type="radio"]:checked + label {
+  background: var(--white);
+}
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+/*SLIDES Section Styles*/
+
+* {
+    box-sizing:content-box;
+  }
+  
+  img {
+    width: 50%;
+    height: auto;
+    
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides .mySlidesA .mySlidesP .mySlidesW {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/7 etc) */
+  .numbertext {
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    padding: 2px 16px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /*columns side by side */
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 14%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo .demoA .demoP .demoW {
+    opacity: 0.6;
+    width: 100%;
+  }
+
+  
+  .active,
+  .demo:hover .demoA:hover .demoP:hover .demoW:hover {
+    opacity: 1;
+  }
+
+  
+  
+
+/*Price Buttons*/
+.button-container {
+    display: flex;
+    flex-direction: column; /* Ensures buttons stack vertically */
+    gap: 30px;
+    align-items: center; /* Centers buttons in the container */
+}
+.price-button {
+    font-family: "archivo-narrow-400";
+    position: relative;
+    width: 420px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    overflow: visible;
+    z-index: 1; /* Default stack order */
+    text-align: center; /* Centers button text */
+}
+.price-button::after {
+    content: attr(data-price);
+    transform: translate(-50%, -10px);  /* Move it slightly up */
+    bottom: 100%; /* Instead of top: 100%, we use bottom: 100% to place it above */
+    font-family: "archivo-narrow-400";
+    position: absolute;
+    z-index: -1;
+    white-space: nowrap;
+    left: 50%;
+    background: var(--glow);
+    color: var(--black);
+    width: 400px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    
+}
+.price-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--glow);
+    z-index: 10;
+}
+
+.price-button:hover::after {
+    background: linear-gradient(90deg, var(--blue), var(--orange), var(--pink));
+    bottom: 0%; /* Move it further up on hover */
+    opacity: 1;
+    z-index: 10;
+}
+/* Button Colors */
+.graphic-design { background: var(--orange); }
+.photography { background: var(--blue); }
+.animation { background: var(--pink); }
+.web-design { background: var(--orange); }
+
+
+  /* CONTACT FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background: linear-gradient(90deg, var(--blue), var(--orange), var(--pink));
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* Accordion Styling */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+  /*footer*/
+  .social-media  {
+    display:flex;
+    flex-direction: row;
+    justify-content: center space-around;
+    align-items: center;
+  }
+  .social-media img {
+    height: 3.6rem;
+    width: 3.6rem;
+    margin: 0 10px;
+    transition: transform 0.2s;
+  }
