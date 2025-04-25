@@ -417,14 +417,11 @@ form {
 
 /* Testamonial Styling */
 .collapsible {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--orange);
+  background-color: #777;
   color: white;
   cursor: pointer;
   padding: 18px;
-  width: 50%;
+  width: 100%;
   border: none;
   text-align: left;
   outline: none;
@@ -432,14 +429,14 @@ form {
 }
 
 .active, .collapsible:hover {
-  background-color:  var(--blue);
+  background-color: #555;
 }
 
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: var(--pink)1;
+  background-color: #f1f1f1;
 }
 
   /*footer*/
