@@ -54,8 +54,8 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("demo");
   let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slideIndex = 1};
+  if (n < 1) {slideIndex = slides.length};
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -134,8 +134,8 @@ function showSlidesP(n) {
   let slides = document.getElementsByClassName("mySlidesP");
   let dots = document.getElementsByClassName("demoP");
   let captionText = document.getElementById("captionP");
-  if (n > slides.length) {slideIndexP = 1}
-  if (n < 1) {slideIndexP = slides.length}
+  if (n > slides.length) {slideIndexP = 1};
+  if (n < 1) {slideIndexP = slides.length};
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -145,7 +145,7 @@ function showSlidesP(n) {
   slides[slideIndexP-1].style.display = "block";
   dots[slideIndexP-1].className += " active";
   captionText.innerHTML = dots[slideIndexP-1].alt;
-}
+};
   showSlidesP(slideIndexP);
 
 // Web Design/Development slides
@@ -165,8 +165,8 @@ function showSlidesW(n) {
   let slides = document.getElementsByClassName("mySlidesW");
   let dots = document.getElementsByClassName("demoW");
   let captionText = document.getElementById("captionW");
-  if (n > slides.length) {slideIndexW = 1}
-  if (n < 1) {slideIndexW = slides.length}
+  if (n > slides.length) {slideIndexW = 1};
+  if (n < 1) {slideIndexW = slides.length};
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
