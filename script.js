@@ -22,11 +22,14 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 }
 
 //testimonails
-var coll = document.getElementsByClassName("collapsible");
-var i;
+
+// function testimonialSection (){
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
+    console.log("You clicked a button.");
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -54,8 +57,8 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("demo");
   let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1};
-  if (n < 1) {slideIndex = slides.length};
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -84,13 +87,6 @@ function showSlidesA(n) {
   let slides = document.getElementsByClassName("mySlidesA");
   let dots = document.getElementsByClassName("dotA");
   let captionText = document.getElementById("captionA");
-
-  // Check if slides and dots exist
-  if (slides.length === 0 || dots.length === 0) {
-    console.error("Slides or dots for Animation slides are missing.");
-    return;
-  }
-
   if (n > slides.length) { slideIndexA = 1; }
   if (n < 1) { slideIndexA = slides.length; }
 
@@ -102,18 +98,18 @@ function showSlidesA(n) {
     dots[i].className = dots[i].className.replace(" activeA", "");
   }
 
-  // Ensure slideIndexA is within bounds
-  if (slideIndexA - 1 >= 0 && slideIndexA - 1 < slides.length) {
-    slides[slideIndexA - 1].style.display = "block";
-  } else {
-    console.error("Invalid slideIndexA:", slideIndexA);
-  }
+  /* There was nothing wrong with the Collabsible code.
+  The problem was that an error was reported around line 102.
+  Because of this the rest of the code would not run.
 
-  if (slideIndexA - 1 >= 0 && slideIndexA - 1 < dots.length) {
-    dots[slideIndexA - 1].className += " activeA";
-  } else {
-    console.error("Invalid dot index:", slideIndexA - 1);
-  }
+  I opted to simply move the testimonials code up above
+  the error and it works. Your next challenge is to troubleshoot
+  the error caught here.
+
+  */
+
+  slides[slideIndexA - 1].style.display = "block";
+  dots[slideIndexA - 1].className += " activeA"; /* An error is reported here when viewing the console (line 102) */
 }
 
 
@@ -134,8 +130,8 @@ function showSlidesP(n) {
   let slides = document.getElementsByClassName("mySlidesP");
   let dots = document.getElementsByClassName("demoP");
   let captionText = document.getElementById("captionP");
-  if (n > slides.length) {slideIndexP = 1};
-  if (n < 1) {slideIndexP = slides.length};
+  if (n > slides.length) {slideIndexP = 1}
+  if (n < 1) {slideIndexP = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -145,7 +141,7 @@ function showSlidesP(n) {
   slides[slideIndexP-1].style.display = "block";
   dots[slideIndexP-1].className += " active";
   captionText.innerHTML = dots[slideIndexP-1].alt;
-};
+}
   showSlidesP(slideIndexP);
 
 // Web Design/Development slides
@@ -165,8 +161,8 @@ function showSlidesW(n) {
   let slides = document.getElementsByClassName("mySlidesW");
   let dots = document.getElementsByClassName("demoW");
   let captionText = document.getElementById("captionW");
-  if (n > slides.length) {slideIndexW = 1};
-  if (n < 1) {slideIndexW = slides.length};
+  if (n > slides.length) {slideIndexW = 1}
+  if (n < 1) {slideIndexW = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
