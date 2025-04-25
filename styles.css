@@ -169,13 +169,15 @@ nav ul li a:hover {
     height: 150%;
 }
 
-.logo img {
-  src: url("images/3.3_Soto_Logo_R.png"); /* Default light mode logo */
+@media (prefers-color-scheme: light) {
+  .logo img {
+    src: (images/3.3_Soto_Logo_R.png); /* light mode logo */
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .logo img {
-    src: url("images/3.3_Soto_Logo.png"); /* Dark mode logo */
+    src: (images/3.3_Soto_Logo.png); /* Dark mode logo */
   }
 }
 
