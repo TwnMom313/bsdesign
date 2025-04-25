@@ -69,21 +69,28 @@ function showSlides(n) {
 
 // Animation slides
 let slideIndexA = 1;
-showSlides(slideIndexA);
+showSlidesA(slideIndexA);
 
-function plusSlides(n) {
-  showSlides(slideIndexA += n);
+function plusSlidesA(n) {
+  showSlidesA(slideIndexA += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexA = n);
+function currentSlideA(n) {
+  showSlidesA(slideIndexA = n);
 }
 
-function showSlides(n) {
+function showSlidesA(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesA");
   let dots = document.getElementsByClassName("dotA");
   let captionText = document.getElementById("captionA");
+
+  // Check if slides and dots exist
+  if (slides.length === 0 || dots.length === 0) {
+    console.error("Slides or dots for Animation slides are missing.");
+    return;
+  }
+
   if (n > slides.length) { slideIndexA = 1; }
   if (n < 1) { slideIndexA = slides.length; }
 
@@ -95,24 +102,34 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" activeA", "");
   }
 
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  // Ensure slideIndexA is within bounds
+  if (slideIndexA - 1 >= 0 && slideIndexA - 1 < slides.length) {
+    slides[slideIndexA - 1].style.display = "block";
+  } else {
+    console.error("Invalid slideIndexA:", slideIndexA);
+  }
+
+  if (slideIndexA - 1 >= 0 && slideIndexA - 1 < dots.length) {
+    dots[slideIndexA - 1].className += " activeA";
+  } else {
+    console.error("Invalid dot index:", slideIndexA - 1);
+  }
 }
 
 
 // Photography slides
 let slideIndexP = 1;
-showSlides(slideIndexP);
+showSlidesP(slideIndexP);
 
-function plusSlides(n) {
-  showSlides(slideIndexP += n);
+function plusSlidesP(n) {
+  showSlidesP(slideIndexP += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexP = n);
+function currentSlideP(n) {
+  showSlidesP(slideIndexP = n);
 }
 window.onload = 
-function showSlides(n) {
+function showSlidesP(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesP");
   let dots = document.getElementsByClassName("demoP");
@@ -125,25 +142,25 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndexP-1].style.display = "block";
+  dots[slideIndexP-1].className += " active";
   captionText.innerHTML = dots[slideIndexP-1].alt;
 }
-  showSlides(slideIndexP);
+  showSlidesP(slideIndexP);
 
 // Web Design/Development slides
 let slideIndexW = 1;
-showSlides(slideIndexW);
+showSlidesW(slideIndexW);
 
-function plusSlides(n) {
-  showSlides(slideIndexW += n);
+function plusSlidesW(n) {
+  showSlidesW(slideIndexW += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexW = n);
+function currentSlideW(n) {
+  showSlidesW(slideIndexW = n);
 }
 
-function showSlides(n) {
+function showSlidesW(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesW");
   let dots = document.getElementsByClassName("demoW");
@@ -156,10 +173,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndexW-1].style.display = "block";
+  dots[slideIndexW-1].className += " active";
   captionText.innerHTML = dots[slideIndexW-1].alt;
 }
-
-
-
