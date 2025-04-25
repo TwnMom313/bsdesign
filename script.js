@@ -26,7 +26,7 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("onclick", function() {
+  coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -69,17 +69,17 @@ function showSlides(n) {
 
 // Animation slides
 let slideIndexA = 1;
-showSlidesA(slideIndexA);
+showSlides(slideIndexA);
 
-function plusSlidesA(n) {
-  showSlidesA(slideIndexA += n);
+function plusSlides(n) {
+  showSlides(slideIndexA += n);
 }
 
-function currentSlideA(n) {
-  showSlidesA(slideIndexA = n);
+function currentSlide(n) {
+  showSlides(slideIndexA = n);
 }
 
-function showSlidesA(n) {
+function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesA");
   let dots = document.getElementsByClassName("dotA");
@@ -95,24 +95,24 @@ function showSlidesA(n) {
     dots[i].className = dots[i].className.replace(" activeA", "");
   }
 
-  slides[slideIndexA - 1].style.display = "block";
-  dots[slideIndexA - 1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
 
 // Photography slides
 let slideIndexP = 1;
-showSlidesP(slideIndexP);
+showSlides(slideIndexP);
 
-function plusSlidesP(n) {
-  showSlidesP(slideIndexP += n);
+function plusSlides(n) {
+  showSlides(slideIndexP += n);
 }
 
-function currentSlideP(n) {
-  showSlidesP(slideIndexP = n);
+function currentSlide(n) {
+  showSlides(slideIndexP = n);
 }
 window.onload = 
-function showSlidesP(n) {
+function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesP");
   let dots = document.getElementsByClassName("demoP");
@@ -125,25 +125,25 @@ function showSlidesP(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndexP-1].style.display = "block";
-  dots[slideIndexP-1].className += " active";
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndexP-1].alt;
 }
-  showSlidesP(slideIndexP);
+  showSlides(slideIndexP);
 
 // Web Design/Development slides
 let slideIndexW = 1;
-showSlidesW(slideIndexW);
+showSlides(slideIndexW);
 
-function plusSlidesW(n) {
-  showSlidesW(slideIndexW += n);
+function plusSlides(n) {
+  showSlides(slideIndexW += n);
 }
 
-function currentSlideW(n) {
-  showSlidesW(slideIndexW = n);
+function currentSlide(n) {
+  showSlides(slideIndexW = n);
 }
 
-function showSlidesW(n) {
+function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesW");
   let dots = document.getElementsByClassName("demoW");
@@ -156,8 +156,8 @@ function showSlidesW(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndexW-1].style.display = "block";
-  dots[slideIndexW-1].className += " active";
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndexW-1].alt;
 }
 
