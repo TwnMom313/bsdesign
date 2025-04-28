@@ -21,6 +21,22 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
   logoImage.src = "images/3.3_Soto_Logo_R.png";
 }
 
+//accordian testimonails
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
 //Graphics slides
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -145,18 +161,3 @@ function showSlidesW(n) {
   captionText.innerHTML = dots[slideIndexW-1].alt;
 }
 
-//accordian testimonails
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
