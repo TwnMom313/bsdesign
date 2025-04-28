@@ -254,7 +254,6 @@ nav ul li a:hover {
     align-items: center;
     margin: auto;
     border-radius: 10px;
-    box-shadow: 0 0 20px var(--black);
     
   }
   
@@ -335,7 +334,7 @@ nav ul li a:hover {
   
   /* Add a transparency effect for thumnbail images */
   .demo .demoA .demoP .demoW {
-    opacity: 0.6;
+    opacity: 0.2;
     width: 100%;
   }
 
