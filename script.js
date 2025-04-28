@@ -11,16 +11,6 @@ function toggleDarkMode(event) {
 
 prefersDark.addEventListener('change', toggleDarkMode);
 
-
-//logo swap dark mode
-const logoImage = document.getElementById('your-logo-id');
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  logoImage.src = "images/3.3_Soto_Logo.png";
-} else {
-  logoImage.src = "images/3.3_Soto_Logo_R.png";
-}
-
 //testimonails
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -36,6 +26,15 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// //logo swap dark mode
+// const logoImage = document.getElementById('your-logo-id');
+
+// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+//   logoImage.src = "images/3.3_Soto_Logo.png";
+// } else {
+//   logoImage.src = "images/3.3_Soto_Logo_R.png";
+// }
 
 //Graphics slides
 let slideIndex = 1;
