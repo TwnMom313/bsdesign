@@ -21,25 +21,6 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
   logoImage.src = "images/3.3_Soto_Logo_R.png";
 }
 
-//testimonails
-
-// function testimonialSection (){
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    console.log("You clicked a button.");
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
 //Graphics slides
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -72,21 +53,21 @@ function showSlides(n) {
 
 // Animation slides
 let slideIndexA = 1;
-showSlides(slideIndexA);
+showSlidesA(slideIndexA);
 
-function plusSlides(n) {
-  showSlides(slideIndexA += n);
+function plusSlidesA(n) {
+  showSlidesA(slideIndexA += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexA = n);
+function currentSlideA(n) {
+  showSlidesA(slideIndexA = n);
 }
 
-function showSlides(n) {
+function showSlidesA(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesA");
-  let dots = document.getElementsByClassName("dot");
-  let captionText = document.getElementById("caption");
+  let dots = document.getElementsByClassName("dotA");
+  let captionText = document.getElementById("captionA");
   if (n > slides.length) { slideIndexA = 1; }
   if (n < 1) { slideIndexA = slides.length; }
 
@@ -95,41 +76,31 @@ function showSlides(n) {
   }
 
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" activeA", "");
   }
 
-  /* There was nothing wrong with the Collabsible code.
-  The problem was that an error was reported around line 102.
-  Because of this the rest of the code would not run.
-
-  I opted to simply move the testimonials code up above
-  the error and it works. Your next challenge is to troubleshoot
-  the error caught here.
-
-  */
-
   slides[slideIndexA - 1].style.display = "block";
-  dots[slideIndexA - 1].className += " activeA"; /* An error is reported here when viewing the console (line 102) */
+  dots[slideIndexA - 1].className += " activeA";
 }
 
 
 // Photography slides
 let slideIndexP = 1;
-showSlides(slideIndexP);
+showSlidesP(slideIndexP);
 
-function plusSlides(n) {
-  showSlides(slideIndexP += n);
+function plusSlidesP(n) {
+  showSlidesP(slideIndexP += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexP = n);
+function currentSlideP(n) {
+  showSlidesP(slideIndexP = n);
 }
 window.onload = 
-function showSlides(n) {
+function showSlidesP(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesP");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+  let dots = document.getElementsByClassName("demoP");
+  let captionText = document.getElementById("captionP");
   if (n > slides.length) {slideIndexP = 1}
   if (n < 1) {slideIndexP = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -142,25 +113,25 @@ function showSlides(n) {
   dots[slideIndexP-1].className += " active";
   captionText.innerHTML = dots[slideIndexP-1].alt;
 }
-  showSlides(slideIndexP);
+  showSlidesP(slideIndexP);
 
 // Web Design/Development slides
 let slideIndexW = 1;
-showSlides(slideIndexW);
+showSlidesW(slideIndexW);
 
-function plusSlides(n) {
-  showSlides(slideIndexW += n);
+function plusSlidesW(n) {
+  showSlidesW(slideIndexW += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndexW = n);
+function currentSlideW(n) {
+  showSlidesW(slideIndexW = n);
 }
 
-function showSlides(n) {
+function showSlidesW(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesW");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+  let dots = document.getElementsByClassName("demoW");
+  let captionText = document.getElementById("captionW");
   if (n > slides.length) {slideIndexW = 1}
   if (n < 1) {slideIndexW = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -172,4 +143,20 @@ function showSlides(n) {
   slides[slideIndexW-1].style.display = "block";
   dots[slideIndexW-1].className += " active";
   captionText.innerHTML = dots[slideIndexW-1].alt;
+}
+
+//accordian testimonails
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
