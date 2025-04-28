@@ -249,6 +249,12 @@ nav ul li a:hover {
   img {
     width: 50%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--glow);
     
   }
   
@@ -292,7 +298,10 @@ nav ul li a:hover {
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--orange);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 20px var(--glow);
   }
   
   /* Number text (1/7 etc) */
