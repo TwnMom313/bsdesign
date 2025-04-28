@@ -72,21 +72,21 @@ function showSlides(n) {
 
 // Animation slides
 let slideIndexA = 1;
-showSlidesA(slideIndexA);
+showSlides(slideIndexA);
 
-function plusSlidesA(n) {
-  showSlidesA(slideIndexA += n);
+function plusSlides(n) {
+  showSlides(slideIndexA += n);
 }
 
-function currentSlideA(n) {
-  showSlidesA(slideIndexA = n);
+function currentSlide(n) {
+  showSlides(slideIndexA = n);
 }
 
-function showSlidesA(n) {
+function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesA");
-  let dots = document.getElementsByClassName("dotA");
-  let captionText = document.getElementById("captionA");
+  let dots = document.getElementsByClassName("dot");
+  let captionText = document.getElementById("caption");
   if (n > slides.length) { slideIndexA = 1; }
   if (n < 1) { slideIndexA = slides.length; }
 
@@ -95,7 +95,7 @@ function showSlidesA(n) {
   }
 
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" activeA", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
 
   /* There was nothing wrong with the Collabsible code.
@@ -115,21 +115,21 @@ function showSlidesA(n) {
 
 // Photography slides
 let slideIndexP = 1;
-showSlidesP(slideIndexP);
+showSlides(slideIndexP);
 
-function plusSlidesP(n) {
-  showSlidesP(slideIndexP += n);
+function plusSlides(n) {
+  showSlides(slideIndexP += n);
 }
 
-function currentSlideP(n) {
-  showSlidesP(slideIndexP = n);
+function currentSlide(n) {
+  showSlides(slideIndexP = n);
 }
 window.onload = 
-function showSlidesP(n) {
+function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesP");
-  let dots = document.getElementsByClassName("demoP");
-  let captionText = document.getElementById("captionP");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndexP = 1}
   if (n < 1) {slideIndexP = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -142,25 +142,25 @@ function showSlidesP(n) {
   dots[slideIndexP-1].className += " active";
   captionText.innerHTML = dots[slideIndexP-1].alt;
 }
-  showSlidesP(slideIndexP);
+  showSlides(slideIndexP);
 
 // Web Design/Development slides
 let slideIndexW = 1;
-showSlidesW(slideIndexW);
+showSlides(slideIndexW);
 
-function plusSlidesW(n) {
-  showSlidesW(slideIndexW += n);
+function plusSlides(n) {
+  showSlides(slideIndexW += n);
 }
 
-function currentSlideW(n) {
-  showSlidesW(slideIndexW = n);
+function currentSlide(n) {
+  showSlides(slideIndexW = n);
 }
 
-function showSlidesW(n) {
+function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlidesW");
-  let dots = document.getElementsByClassName("demoW");
-  let captionText = document.getElementById("captionW");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndexW = 1}
   if (n < 1) {slideIndexW = slides.length}
   for (i = 0; i < slides.length; i++) {
