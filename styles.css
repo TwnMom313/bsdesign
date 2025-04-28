@@ -254,7 +254,6 @@ nav ul li a:hover {
     align-items: center;
     margin: auto;
     border-radius: 10px;
-    
   }
   
   /* Position the image container (needed to position the left and right arrows) */
@@ -300,7 +299,6 @@ nav ul li a:hover {
     background-color: var(--orange);
     border-radius: 10px;
     color: white;
-    box-shadow: 0 0 20px var(--black);
   }
   
   /* Number text (1/7 etc) */
