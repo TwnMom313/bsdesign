@@ -425,12 +425,13 @@ form {
 
 /* Testamonial Styling */
 .testimonial {
-    display: flex;
+    
+}
+.collapsible {
+  display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.collapsible {
   background-color: var(--orange);
   color: white;
   cursor: pointer;
@@ -452,7 +453,6 @@ form {
   display: none;
   overflow: hidden;
   background-color: var(--blue);
-  opacity: 0.4;
 }
 
   /*footer*/
