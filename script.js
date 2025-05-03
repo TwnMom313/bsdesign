@@ -81,9 +81,9 @@ function currentSlideA(n) {
 function showSlidesA(n) {
   let j;
   let slidesA = document.getElementsByClassName("mySlidesA");
-  let dotsA = document.getElementsByClassName("demo");
-  let captionTextA = document.getElementById("caption");
-  if (n > slides.length) {slideIndexA = 1}
+  let dotsA = document.getElementsByClassName("demoA");
+  let captionTextA = document.getElementById("captionA");
+  if (n > slidesA.length) {slideIndexA = 1}
   if (n < 1) {slideIndexA = slidesA.length}
   for (j = 0; j < slidesA.length; j++) {
     slidesA[i].style.display = "none";
@@ -112,8 +112,8 @@ function currentSlideP(n) {
 function showSlidesP(n) {
   let y;
   let slidesP = document.getElementsByClassName("mySlidesP");
-  let dotsP = document.getElementsByClassName("demo");
-  let captionTextP = document.getElementById("caption");
+  let dotsP = document.getElementsByClassName("demoP");
+  let captionTextP = document.getElementById("captionP");
   if (n > slidesP.length) {slideIndexP = 1}
   if (n < 1) {slideIndexP = slides.length}
   for (y = 0; y < slidesP.length; y++) {
@@ -142,8 +142,8 @@ function currentSlideW(n) {
 function showSlidesW(n) {
   let g;
   let slidesW = document.getElementsByClassName("mySlidesW");
-  let dotsW = document.getElementsByClassName("demo");
-  let captionTextW = document.getElementById("caption");
+  let dotsW = document.getElementsByClassName("demoW");
+  let captionTextW = document.getElementById("captionW");
   if (n > slides.length) {slideIndexW = 1}
   if (n < 1) {slideIndexW = slidesW.length}
   for (g = 0; g < slidesW.length; g++) {
