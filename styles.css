@@ -468,3 +468,16 @@ form {
     margin: 0 10px;
     transition: transform 0.2s;
   }
+
+/* Centered section layout */
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 900px; /* Keeps consistent width like other sections */
+  margin: 0 auto;   /* Centers it horizontally */
+  padding: 2rem 0;
+}
